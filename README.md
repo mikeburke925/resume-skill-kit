@@ -1,6 +1,6 @@
 # resume-skill-kit
 
-> A four-phase Claude skill for rewriting, targeting, and submitting resumes that don't get ignored.
+> A four-phase Claude skill for rewriting, targeting, and submitting resumes & cover letters that don't get ignored.
 
 ---
 
