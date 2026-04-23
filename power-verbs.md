@@ -1,62 +1,35 @@
 # Power Verbs Reference
 
-Use these verbs to open resume bullets. Each bullet should start with one — never start with "I,"
-a passive verb ("was responsible for"), or a noun.
+Use this bank when replacing weak verbs. Match category to the bullet's domain.
 
-Customize this list to match your industry and voice. Remove verbs that don't fit your work;
-add domain-specific ones that do.
+## Leadership & Strategy
+architected, championed, directed, drove, established, founded, governed, guided, led, mobilized, orchestrated, pioneered, shaped, spearheaded, steered, unified, vision
 
----
+## Building & Launching
+built, created, deployed, designed, developed, engineered, implemented, introduced, launched, produced, prototyped, released, shipped, stood up
 
-## Operations & Process
-Accelerated, Architected, Automated, Built, Centralized, Consolidated, Cut, Deployed,
-Designed, Drove, Eliminated, Engineered, Established, Executed, Expanded, Implemented,
-Improved, Launched, Led, Managed, Negotiated, Operationalized, Optimized, Overhauled,
-Partnered, Piloted, Pioneered, Reduced, Rebuilt, Restructured, Rolled out, Scaled, Shipped,
-Simplified, Standardized, Streamlined [only with metric], Transformed
+## Growth & Scale
+accelerated, expanded, grew, scaled, tripled, doubled, increased, boosted, elevated, maximized, unlocked
 
-## Strategy & Growth
-Accelerated, Achieved, Advanced, Built, Captured, Closed, Created, Delivered, Developed,
-Drove, Executed, Expanded, Generated, Grew, Identified, Increased, Initiated, Landed,
-Launched, Led, Opened, Outperformed, Penetrated, Positioned, Produced, Proposed, Secured,
-Set, Shaped, Surpassed, Won
+## Efficiency & Process
+automated, centralized, consolidated, eliminated, optimized, overhauled, reduced, restructured, simplified, standardized, transformed, cut
 
-## Data & Analysis
-Analyzed, Audited, Built, Calculated, Captured, Compiled, Developed, Evaluated, Forecasted,
-Identified, Mapped, Measured, Modeled, Monitored, Quantified, Reported, Researched, Reviewed,
-Synthesized, Tested, Tracked, Validated
+## Revenue & Finance
+closed, generated, grew, negotiated, secured, captured, converted, recovered, saved, delivered ($X in)
 
-## Leadership & Collaboration
-Advised, Aligned, Built, Championed, Coached, Collaborated, Coordinated, Cultivated,
-Developed, Directed, Facilitated, Guided, Hired, Influenced, Led, Managed, Mentored,
-Mobilized, Motivated, Organized, Oversaw, Recruited, Supervised, Trained, United
+## Collaboration & Communication
+aligned, brokered, coordinated, facilitated, influenced, partnered, presented, rallied, trained, mentored, coached
 
-## Finance & Business Affairs
-Administered, Allocated, Approved, Audited, Closed, Constructed, Controlled, Coordinated,
-Developed, Evaluated, Executed, Forecasted, Managed, Negotiated, Planned, Processed,
-Reduced, Reviewed, Secured, Structured
+## Analysis & Insight
+analyzed, audited, benchmarked, diagnosed, evaluated, identified, mapped, measured, modeled, researched, surfaced, synthesized
 
-## Technology & Product
-Automated, Built, Configured, Deployed, Designed, Developed, Engineered, Implemented,
-Integrated, Launched, Maintained, Migrated, Modernized, Optimized, Prototyped, Released,
-Scaled, Shipped, Tested
+## ❌ Never Use (Weak Verbs)
+helped, assisted, worked on, was responsible for, participated in, contributed to, supported, handled, did, managed (when it means "was near"), utilized, leveraged, interfaced with
 
-## Creative & Communications
-Authored, Built, Crafted, Created, Defined, Designed, Developed, Directed, Drafted,
-Edited, Established, Launched, Led, Produced, Published, Wrote
-
----
-
-## Verbs to Avoid
-
-These are overused to the point of becoming noise. Replace with something more specific:
-
-- **Managed** — what specifically? Led? Oversaw? Grew? Reduced?
-- **Responsible for** — never start a bullet with this; it's passive filler
-- **Helped** — vague; what did you actually do?
-- **Worked on** — same; be specific
-- **Supported** — only acceptable if you're describing a supporting role with a clear metric
-- **Assisted** — same as supported
+## ⚠️ Rescue Rule
+A flagged word (streamlined, leveraged) is acceptable ONLY when a specific metric immediately follows it.
+- ❌ "Streamlined the onboarding process"
+- ✅ "Streamlined onboarding from 3 weeks to 4 days, cutting ramp cost by 40%"
 - **Handled** — vague; replace with the specific action
 - **Utilized / Leveraged** — replace with "used"
 - **Spearheaded** — acceptable once per resume, not more
