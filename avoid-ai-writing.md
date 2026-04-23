@@ -1,63 +1,217 @@
-# Avoid AI Writing — Reference Rules
+# AI Writing Rules — Resume & Cover Letter Reference
 
-Adapted from the [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) skill by
-Conor Bronsdon (MIT License). Included here as a bundled reference for resume and cover letter
-AI-isms detection.
-
-For standalone use, detect-only mode, and the full rule set, see the original skill.
+This file defines all AI-ism detection and removal rules for the resume-rewrite skill. Load it before any AI-writing pass in Phase 1, Phase 2A, Phase 2B, or Phase 3.
 
 ---
 
-## Modes
+## Resume-Specific Profile
 
-**`rewrite`** (default) — Flag AI-isms and rewrite the text to fix them.
+Apply **`blog` profile strictness** across all resume phases with these modifications:
 
-**`detect`** — Flag AI-isms only. No rewriting. Use when you want to see what's flagged before
-deciding what to fix yourself.
+| Rule | Resume modification |
+|---|---|
+| Excessive bullets | **Skip** — bullets are structurally correct on a resume |
+| Em dashes in bullet lines | **Skip** — acceptable in resume formatting |
+| Flagged verb + immediate metric | **Rescue rule** — keep the verb (see below) |
+| Em dashes in cover letter | **Zero tolerance** — remove every one |
 
----
+**Rescue rule:** A flagged verb is acceptable if a specific metric immediately follows it.
+- ❌ "Streamlined operations across the org"
+- ✅ "Streamlined operations across 6 offices, cutting overhead by $200K"
 
-## What to Remove or Fix
-
-### Formatting
-- **Em dashes (— and --)**: Replace with commas, periods, parentheses, or two sentences.
-  Hard max: one per 1,000 words.
-- **Bold overuse**: Strip bold from most phrases. One bolded phrase per major section at most.
-- **Emoji in headers**: Remove entirely.
-- **Excessive bullet lists**: Convert to prose paragraphs unless content is genuinely list-like.
-
-### Sentence Structure
-- **"It's not X — it's Y"**: Rewrite as a direct positive statement.
-- **Hollow intensifiers**: Cut `genuine`, `truly`, `quite frankly`, `to be honest`, `let's be clear`,
-  `it's worth noting that`.
-- **Vague endorsement**: Cut `worth reading`, `worth a look`, `worth exploring`. Say *why* instead.
-- **Hedging**: Cut `perhaps`, `could potentially`, `it's important to note that`. Make the point directly.
-- **Compulsive rule of three**: Vary groupings — two items, four items, a full sentence.
+The rescue rule applies to bullets only. In the Summary and Cover Letter, rewrite the verb regardless.
 
 ---
 
-## Words and Phrases to Replace
+## Priority Order for Resume Passes
 
-### Tier 1 — Always Replace
+Run flags in this order — fix P0 first, then P1, then P2.
+
+### P0 — Credibility killers (fix immediately)
+- Vague attributions without sources ("Experts believe," "Studies show")
+- Chatbot artifacts ("I hope this helps!", "Great question!", "As of my last update")
+- Objective statements (delete entirely, replace with Summary)
+- "References available upon request" (delete)
+
+### P1 — Obvious AI smell (fix before any submission)
+- Word-list violations (see Tier 1 below): delve, leverage, robust, seamless, utilize, holistic, impactful, synergy, etc.
+- Template phrases and slot-fill constructions
+- "Results-driven," "proven track record," "passionate professional," "dynamic leader," "go-getter"
+- "Responsible for," "worked closely with," "helped to," "assisted with"
+- Bold overuse (outside of section headers)
+- Spearheaded — use sparingly; if it appears more than once, replace the extras
+
+### P2 — Stylistic polish (fix when time allows)
+- Uniform sentence length across all bullets (vary deliberately)
+- Transition phrases: Moreover, Furthermore, Additionally
+- Significance inflation: "pivotal moment," "watershed," "marking a new era"
+- Generic conclusions in cover letter ("I look forward to contributing to your mission")
+
+---
+
+## Tier 1 — Always Replace
+
+These appear 5–20x more often in AI text than human text. Replace on sight.
 
 | Replace | With |
 |---|---|
-| delve / delve into | explore, dig into, look at |
-| landscape (metaphor) | field, space, industry, world |
-| tapestry | (describe the actual complexity) |
-| realm | area, field, domain |
-| paradigm | model, approach, framework |
-| embark | start, begin |
-| beacon | (rewrite entirely) |
-| testament to | shows, proves, demonstrates |
+| results-driven | (describe the results instead) |
+| proven track record | (cite actual results with metrics) |
+| passionate professional | (cut — show passion through specifics) |
+| dynamic leader | (cut — show leadership through outcomes) |
+| go-getter | (cut) |
+| leveraged | used |
+| utilized | used |
 | robust | strong, reliable, solid |
 | comprehensive | thorough, complete, full |
-| cutting-edge | latest, newest, advanced |
-| leverage (verb) | use |
-| pivotal | important, key, critical |
-| underscores | highlights, shows |
-| meticulous / meticulously | careful, detailed, precise |
 | seamless / seamlessly | smooth, easy, without friction |
+| holistic / holistically | complete, full (or describe what's included) |
+| impactful | effective, significant (or describe the impact) |
+| synergy / synergies | (describe the actual combined effect) |
+| spearheaded | led, drove, ran (use once max) |
+| responsible for | (rewrite with an active verb — what did they do?) |
+| worked closely with | partnered with, collaborated with (then state the outcome) |
+| helped to | (rewrite with an active verb + metric) |
+| cutting-edge | latest, advanced (or name what's new) |
+| innovative / innovation | (describe what's actually new) |
+| game-changer / game-changing | (describe what specifically changed) |
+| thought leader / thought leadership | expert, authority (or describe their actual contribution) |
+| best practices | what works, proven methods, standard approach |
+| actionable | practical, useful, concrete |
+| learnings | lessons, findings, takeaways |
+| paradigm | model, approach, framework |
+| ecosystem (metaphor) | system, community, network, market |
+| deep dive / dive into | look at, examine, explore |
+| unpack / unpacking | explain, break down, walk through |
+| seamless integration | (describe how it works, or cut) |
+| streamline | simplify, speed up (or use rescue rule if metric follows) |
+| empower | enable, let, allow |
+| at its core | (cut — just state the thing) |
+| in order to | to |
+| due to the fact that | because |
+| serves as | is |
+| delve / delve into | explore, dig into, look at |
+| utilize | use |
+| pivotal | important, key, critical |
+| meticulous / meticulously | careful, detailed, precise |
+| testament to | shows, proves, demonstrates |
+| underscores | highlights, shows |
+| overarching | main, central, broad |
+| multifaceted | (describe the actual facets, or cut) |
+| transformative / transformation | (describe what changed and how) |
+| cornerstone | foundation, basis, key part |
+
+---
+
+## Tier 2 — Flag When 2+ Appear in the Same Section
+
+These words are legitimate on their own. Two or more in the same summary or cover letter paragraph signals AI-generated prose.
+
+| Replace | With |
+|---|---|
+| harness | use, take advantage of |
+| navigate / navigating | work through, handle, deal with |
+| foster | encourage, support, build |
+| elevate | improve, raise, strengthen |
+| streamline | simplify, speed up |
+| facilitate | enable, help, allow, run |
+| resonate / resonates with | connect with, appeal to, matter to |
+| spearhead | lead, drive, run |
+| revolutionize | change, transform, reshape |
+| cultivate | build, develop, grow |
+| nuanced | specific, subtle, detailed (or name the actual nuance) |
+| crucial | important, key, necessary |
+| paramount | most important, top priority |
+| bolster | support, strengthen, back up |
+| augment | add to, expand, supplement |
+| catalyze | start, trigger, accelerate |
+
+---
+
+## Tier 3 — Flag Only at High Density
+
+Normal words that signal AI when overused. Flag when 3+ appear in the same document section.
+
+| Word | Fix |
+|---|---|
+| significant / significantly | Replace some with specifics: numbers, comparisons |
+| effective / effectively | Say how, or cite a metric |
+| dynamic / dynamics | Name the actual forces or changes |
+| exceptional / exceptionally | Cite what makes it an exception |
+| instrumental | Say what role it played |
+| world-class / best-in-class | Cite a benchmark or comparison |
+
+---
+
+## Template Phrases — Always Remove
+
+These slot-fill constructions signal that a sentence was generated, not written. If a phrase has an invisible blank where any noun could go and still sound the same, it's too generic.
+
+- "results-oriented professional with a passion for..." → describe what you do and for whom
+- "a track record of delivering results in fast-paced environments" → cite an actual result
+- "I am a dedicated [job title] with [X] years of experience in [field]" → rewrite S1 as a direct identity statement
+- "I would be a great fit for this role" → (cut — show fit through the requirement bullets)
+- "I am passionate about [company mission]" → (cut — show it through the opening research sentence)
+- "Looking to leverage my skills in a challenging new role" → (cut entirely)
+- "dynamic and results-driven [title]" → (cut both words, rewrite)
+- "I am a quick learner" → (never — cite a specific example or cut)
+
+---
+
+## Structural Issues to Catch
+
+### Uniform sentence length
+If every bullet is the same length (15–25 words), vary deliberately. Mix short punchy bullets (8–12 words) with longer ones (25+). Length variation is a human signal.
+
+### Formulaic Summary opening
+If the Summary opens with broad context before identity — "With over X years of experience in [field], I have..."— rewrite to lead with identity and the strongest proof point. Context can come second.
+
+### Cover letter flatness
+Cover letters are especially prone to: emotional claims without evidence ("I am passionate about"), vague fit statements ("I would be a great fit"), and soft closes ("I hope to hear from you"). Flag and rewrite all three.
+
+### Transition phrases to remove or rewrite
+- "Moreover" / "Furthermore" / "Additionally" → restructure so the connection is obvious, or use "and," "also," "on top of that"
+- "In today's [X]" → cut or state specific context
+- "It's worth noting that" / "Notably" → just state the fact
+- "In conclusion" / "To summarize" → your conclusion should be obvious from the content
+
+---
+
+## Conducting the AI-Writing Pass
+
+### For Phase 1 (full resume)
+1. Read the entire output — Summary, all bullets, Skills section
+2. Flag every Tier 1 hit. Replace on sight.
+3. Flag Tier 2 clusters (2+ in the same section). Rewrite the section.
+4. Check the Summary separately against the template phrases list
+5. Apply the rescue rule to any flagged verbs in bullets that are followed by a metric — keep them
+6. Output a brief log of what was replaced: list the term and its replacement
+
+### For Phase 2A (five sections only)
+1. Scan all five generated sections (headline, summary, highlights, tech, competencies)
+2. Same rules as Phase 1, applied to just these sections
+3. The headline is especially prone to: "results-driven," "dynamic," "innovative" — remove all
+
+### For Phase 2B (full tailored resume)
+Same as Phase 1. Run after keyword placement so you're not rewriting keywords that need to match the JD exactly.
+
+### For Phase 3 (cover letter)
+1. Full pass: all tiers, all template phrases, all structural checks
+2. Zero em dashes — remove every one, regardless of context
+3. Second pass specifically for the close — strip all soft hedges ("I'd welcome," "I hope to," "I would love the opportunity")
+4. Check the opening line against the hook rules: no "I am writing to apply," no company name, no self-introduction
+5. Check every requirement bullet for a metric — if a bullet has no number, flag it and add one or note it for the user
+
+### Log format (include after each pass)
+```
+AI-WRITING PASS RESULTS:
+Terms replaced: [list each term → replacement]
+Template phrases removed: [list or "none"]
+Structural fixes: [list or "none"]
+Em dashes removed: [count or "none"]
+Soft hedges removed (cover letter only): [list or "none"]
+Clean: [yes / no — if no, note what remains]
+```
 | game-changer / game-changing | describe what specifically changed |
 | utilize | use |
 | holistic / holistically | complete, full, whole |
