@@ -1,119 +1,94 @@
-# ATS Rules Reference
+# ATS Parser Rules & Platform Quirks
 
-Use this file during Phase 2B (Full ATS Optimization) to audit resumes for formatting and
-structural issues that cause ATS systems to misparse or drop candidates before a human sees them.
+## Universal Formatting Rules (All Platforms)
 
-Tested against Workday, Greenhouse, Lever, and iCIMS. Rules may vary by platform version.
+### Section Headings — Use ONLY These
+- Summary (not "Profile," "About Me," "Objective")
+- Experience (not "Work History," "Employment," "Career")
+- Education (not "Academic Background," "Schooling")
+- Skills (not "Competencies," "Expertise," "Toolkit")
+- Certifications (standalone section, not buried in Education)
+- Projects (optional, standalone only)
 
----
+### Formatting That Crashes Parsers — Remove All
+- Tables (even simple 2-column layouts)
+- Text boxes
+- Headers and footers (contact info in headers is invisible to most ATS)
+- Columns / multi-column layouts
+- Graphics, logos, icons, lines as design elements
+- Special characters: ✓ → • ★ ◆ (use plain hyphens or nothing)
+- Fancy bullet styles (use • or plain -)
+- Embedded hyperlinks in body text (spell out URLs or remove)
+- Footnotes
 
-## What ATS Systems Do
+### Date Format — Standardize Throughout
+✅ `Month YYYY – Month YYYY` (e.g., January 2022 – March 2024)
+✅ `MMM YYYY` abbreviated (e.g., Jan 2022 – Mar 2024)
+❌ Never mix formats within a document
 
-Applicant Tracking Systems parse your resume into structured fields: name, contact info,
-work history, education, and skills. If the parser can't read your resume, it may:
-- Mis-assign job titles to the wrong company
-- Drop bullets it can't parse
-- Score you 0% on keyword matching despite having the right skills
-- Reject the file outright
-
-A resume that looks great in PDF may be unreadable to an ATS. These rules prevent that.
-
----
-
-## Format Rules
-
-### File Format
-- **Submit `.docx` or plain `.pdf` when possible.** Some ATS systems handle both; others prefer one.
-  When in doubt, `.docx` parses more reliably.
-- **Never submit a scanned PDF.** Scanned resumes are images — ATS cannot read them.
-- **Avoid PDF created from Canva, Adobe Illustrator, or design tools.** These often use text
-  as image layers that ATS can't parse.
-
-### Layout
-- **Single column only.** Multi-column layouts confuse ATS parsers — content from column 2
-  gets merged into column 1, or dropped entirely.
-- **No tables for main content.** Tables may not be read left-to-right by older parsers.
-  Use plain text with consistent spacing.
-- **No text boxes.** Content in text boxes is frequently invisible to ATS.
-- **No headers/footers for key content.** Name, contact info, and job titles in the header/footer
-  area may not be parsed.
-
-### Fonts and Styling
-- **Standard fonts only.** Stick to: Arial, Calibri, Georgia, Garamond, Times New Roman, Helvetica.
-  Decorative fonts often get stripped or misrendered.
-- **No font sizes below 10pt.** Small text may be skipped by parsers.
-- **Avoid colored text for key content.** Some parsers strip color and may lose text.
+### File Format Guidance
+- `.docx` → ATS submission (most compatible, 90%+ of platforms)
+- `.pdf` → Direct-to-human only (recruiter email, referral, portfolio)
+- Never: `.pages`, `.odt`, `.txt`, image-based PDFs
 
 ---
 
-## Content Rules
+## Platform-Specific Quirks
 
-### Section Headers
-- Use standard section names. ATS systems look for keywords like "Work Experience," "Education,"
-  "Skills," and "Certifications." Creative headers like "Where I've Been" may not be recognized.
-- Acceptable variations:
-  - Work Experience / Experience / Professional Experience
-  - Education / Academic Background
-  - Skills / Technical Skills / Core Competencies
-  - Certifications / Licenses & Certifications
+### Workday
+- Parses chronologically — most recent role must be listed first
+- Skills section is re-entered into dropdowns manually; still include in document for human review
+- GPA and graduation year often required fields; include in Education
+- Hates: graphics, columns, non-standard fonts
 
-### Contact Information
-- Include: name, city/state, email, phone, LinkedIn URL
-- Do NOT include: full street address (privacy risk), headshot/photo, date of birth, gender,
-  marital status
-- Format email as plain text, not as a hyperlink-only clickable — some parsers drop the text
+### Greenhouse
+- Strong keyword matching on exact phrase from JD
+- Pulls skills from the Skills section first, then scans bullets
+- Cover letter often required as free-text entry (not upload)
+- Hates: tables, PDFs with images
 
-### Dates
-- Use consistent date format throughout: `Month YYYY` or `YYYY` only
-- Do not abbreviate inconsistently: `Jan 2022` and `January 2022` in the same document
-  confuses date parsing
-- For current roles: `Month YYYY – Present`
+### Lever
+- Parses LinkedIn-style; chronological order critical
+- Scores on keyword density, not just presence
+- Social URLs (LinkedIn, GitHub) should be in contact section, not hyperlinked body
+- Tolerates PDFs better than most ATS
 
-### Bullets
-- Use standard bullet characters: `•` or `-`. Avoid custom symbols or emoji.
-- Keep bullets as plain text. Nested bullets are often dropped.
-- Do not put important keywords only in a table, text box, or sidebar — they may not be indexed.
-
-### Keywords
-- Use the exact phrasing from the job description, not just synonyms.
-  ATS scores keyword **exact match**. "Project Management" and "PM" are scored separately.
-- Include both the spelled-out form and abbreviation on first use:
-  `Customer Relationship Management (CRM)`
-- Do not hide keywords (white text on white background, font size 1). Modern ATS systems
-  detect this and may penalize or flag the application.
+### iCIMS
+- Most aggressive parser — strip all formatting
+- Reads headers/footers as body text (garbage in output)
+- Prefers `.docx` strongly
+- Skills must be exact-match to their internal taxonomy when possible
 
 ---
 
-## Common ATS Killers (Quick Checklist)
+## Keyword Optimization Rules
 
-Run through this before submitting Phase 2B output:
+### Extraction Priority (from JD)
+1. Job title and title variations
+2. Required technical skills / tools / platforms
+3. Required soft skills listed explicitly (not implied)
+4. Industry-specific terms and certifications
+5. Action verbs used in the JD (mirror them back)
 
-- [ ] File is `.docx` or ATS-safe `.pdf` (not scanned, not from a design tool)
-- [ ] Single-column layout — no tables, text boxes, or multi-column sections
-- [ ] Contact info is in the body, not only in the header/footer
-- [ ] Section headers use standard names
-- [ ] Dates are consistent in format throughout
-- [ ] No decorative fonts, colored text, or very small font sizes
-- [ ] Bullets use standard characters (`•` or `-`)
-- [ ] Keywords from the JD appear as exact-match phrases in the resume text
-- [ ] Acronyms and spelled-out forms both appear (at least on first use)
-- [ ] No hidden text
+### Placement Hierarchy
+1. Summary (highest weight — parsed first)
+2. Skills section (second weight — structured field)
+3. First bullet of most recent role (third weight)
+4. Subsequent bullets
 
----
+### Synonym Coverage Rule
+Always include both forms on first use:
+- `Search Engine Optimization (SEO)` not just `SEO`
+- `Customer Relationship Management (CRM)` not just `CRM`
+- `Key Performance Indicator (KPI)` not just `KPI`
 
-## Platform-Specific Notes
-
-| Platform | Known quirks |
+### ATS Match Score Rubric (1–100)
+| Range | Meaning |
 |---|---|
-| **Workday** | Parses sections strictly. Non-standard headers are often mis-filed. Always use "Work Experience" not "Career History." |
-| **Greenhouse** | Generally robust. Multi-column PDFs still cause problems. Handles `.docx` well. |
-| **Lever** | Strong PDF support. Watch for text boxes — they're silently dropped. |
-| **iCIMS** | Older parser. Very sensitive to layout. Single column + `.docx` is safest. |
-| **Taleo** | Legacy system still used at large enterprises. Least forgiving. Plain text fallback sometimes needed. |
+| 85–100 | Top 10% — proceed confidently |
+| 70–84 | Strong — minor keyword gaps |
+| 55–69 | Moderate — missing key terms |
+| 40–54 | Weak — significant gaps, risk of auto-rejection |
+| <40 | High rejection risk — major overhaul needed |
 
----
-
-## Notes
-
-ATS platforms update regularly. These rules reflect common behavior across major systems as of 2025.
-When in doubt, submit in the simplest possible format — ATS rewards parseable over pretty.
+Score is calculated as: (keywords matched / total keywords extracted) × density bonus (keywords in summary/skills vs. buried in bullets) × format penalty (deduct for any parser-crashing elements found).
