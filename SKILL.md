@@ -456,39 +456,47 @@ The very first sentence of the letter. Its only job is to make the reader want t
 Write the hook as one of these:
 - A bold conviction the candidate holds about the work (Vision from VGPS)
 - A specific, provocative observation about the problem the role is trying to solve
-- A forward-facing statement of what great looks like in this function or field
+- A forward-facing statement of what great looks like — not "I am an operations leader" but "The companies that scale operations without losing velocity are the ones that treat it as a design problem, not a management problem."
 
 Rules:
 - No "I am writing to apply" / "I am excited" / "My name is"
 - No company name in the hook — that comes in sentence 2
-- Should be specific enough to surprise, general enough to not require company context
+- Should be specific enough to surprise, general enough to apply to the reader without needing company context
 - ❌ *"I have spent 10+ years in [field] and am passionate about building scalable systems."*
 - ✅ *"The best [function] work is invisible — you only notice it when it's gone."*
 - ✅ *"The [companies/teams] that [achieve the thing this role is about] are the ones that treat it as a design problem, not a management problem."*
 
 **[CUSTOMIZE] Opening** — 2 sentences
-Sentence 1: Company-specific research proof that names a real business challenge or growth signal (product launch, strategic initiative, earnings result, or stated mission detail). Vision-first framing preferred.
+Sentence 1: Company-specific research that names a real business challenge or growth signal (product launch, strategic initiative, earnings result, or stated mission detail). The goal is not to recap what happened — the reader already knows their own news. Write from the candidate's interpretation of what it *means* strategically. Show that you've thought about it, not just found it.
 Sentence 2: Position the candidate as the direct answer to that challenge. Should read as a declarative statement, not an application.
 
-**[CUSTOMIZE] Requirements Bridge** — 1 sentence
-State the 2–3 requirements the role demands, pulled directly from the JD's own language.
-Format: *"Your role requires [Requirement 1], [Requirement 2], and [Requirement 3]. My background addresses each directly."*
+**[CUSTOMIZE] Requirements Bridge** — 2 sentence
+Transition from the opening into the proof points. Do not restate the JD requirements or mirror them back as a list — that reads as mechanical and redundant with the bullets that follow.
+
+Format:
+- Sentence 1: A declarative statement that this is the kind of work the candidate does. Direct, not humble.
+- Sentence 2: A setup line that leads naturally into the proof points.
 
 **[CUSTOMIZE] Requirement Bullets** — one bullet per requirement
 Each bullet follows this format:
 - **Bold header using the exact JD language as the label**
-- Body: lead with the strongest resume proof point in XYZ format (metric required), followed by one sentence of context if needed.
+- Part 1: The strongest resume proof point in XYZ format (metric required)
+- Part 2: A follow-up sentence that connects that proof point explicitly to the company's specific need or situation. Name the company or reference something concrete about their context. The reader should never have to make the connection themselves.
 
 Example:
 > **Cross-functional Program Management**
-> Reduced go-to-market cycle from 14 weeks to 9 by building a unified program cadence across product, creative, and legal, cutting approval bottlenecks by 40%.
+> Reduced go-to-market cycle from 14 weeks to 9 by building a unified program cadence across product, creative, and legal, cutting approval bottlenecks by 40%. At [Company], where [specific context from JD or research], this is the difference between a CS team that reacts and one that runs ahead of risk.
 
 **[CUSTOMIZE] What Distinguishes Paragraph** — 2–3 sentences
 Name the specific differentiator that separates this candidate from other qualified applicants at the same level. Target the gap that is hardest to fake — not years of experience, but a capability or combination that is genuinely uncommon. Close with: *"At [Company], this translates to [specific result the JD is asking for]."*
 
-**[STATIC] Confident Close** — 2 sentences
-Request an interview directly. Ask to be contacted at earliest convenience. Close with: *"I look forward to hearing from you soon."*
-No soft hedges. No passive invitations. No "I'd welcome." State the ask.
+**[STATIC] Confident Close** — 3 sentences
+Use this exact structure every time:
+1. "I would like to schedule an interview to learn more about your needs and provide additional insight into my background."
+2. One sentence on why the company is genuinely interesting to the candidate — specific, not generic. Pull from the research step or what the candidate told you excites them.
+3. "Please contact me at your earliest convenience. I look forward to hearing from you soon."
+
+No soft hedges. No "I'd welcome." No "I hope to." No "I would love the opportunity."
 
 ### Personalization Key
 After the letter, output:
